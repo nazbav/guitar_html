@@ -1,5 +1,13 @@
 <link  rel="stylesheet" href="style.css">
 
+<script>
+function sound(src) {
+	 var audio = new Audio();
+	 audio.src = src;
+	 audio.autoplay = true;
+}
+</script>
+
 <div class="guitar">
 	<div class="pickups">
 		<div>
@@ -20,12 +28,12 @@
 		<div></div>
 	</div>
 	<div class="strings">
-		<div>6</div>
-		<div>5</div>
-		<div>4</div>
-		<div>3</div>
-		<div>2</div>
-		<div>1</div>
+		<div onclick="sound('6.wav')">6</div>
+		<div onclick="sound('5.wav')">5</div>
+		<div onclick="sound('4.wav')">4</div>
+		<div onclick="sound('3.wav')">3</div>
+		<div onclick="sound('2.wav')">2</div>
+		<div onclick="sound('1.wav')">1</div>
 	</div>
 	<div class="buttons">
 		<div></div>
@@ -33,3 +41,5 @@
 		<div></div>
 	</div>
 </div>
+
+
