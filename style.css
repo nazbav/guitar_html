@@ -1,0 +1,380 @@
+
+:root {
+	--marfil: #fffdec;
+	--shadow: #111;
+	--deg: 90deg;
+	--bridge: linear-gradient(-90deg, #9998, #fff9, #fffc, #ccc8, #8888), repeating-linear-gradient(90deg, #fff4 0.01px, #96a5a580 0.02px, #fff8 0.03px);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(var(--deg), #042d06, #628935, #042d06);
+}
+
+.guitar {
+	width: 360px;
+	height: 100vh;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	margin-top: -2px;
+}
+
+.pickups {
+	width: 360px;
+	height: 80vh;
+	position: absolute;
+	bottom: 20vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.pickups div {
+	position: absolute;
+	width: 340px;
+	height: 170px;
+	border-radius: 10px;
+	margin-top: -250px;
+	filter: drop-shadow(0px 6px 0px var(--shadow)) drop-shadow(4px -1px 0px var(--shadow)) drop-shadow(-4px -1px 0px var(--shadow));
+	box-sizing: border-box;
+	background: linear-gradient(0deg, #222 0 5px, #fff0 0 163px, #222 0 100%), linear-gradient(90deg, #222 0 5px, #fff0 0 355px, #222 0 100%), #222;
+}
+
+.pickups div + div {
+	left: inherit;
+	margin-top: 140px;
+}
+
+.pickups div span {
+	width: calc(100% - 40px);
+	height: calc(50% - 20px);
+	--dot: radial-gradient(circle, #ebebeb 3px, #adadad 8px, #000 9px, #fff0 10px 100%);
+	position: absolute;
+	border-radius: 50px;
+	background: var(--dot), var(--dot), var(--dot), var(--dot), var(--dot), var(--dot), var(--marfil);
+	box-shadow: -2px 0 0 0 var(--shadow), 2px 0 0 0 var(--shadow);
+	z-index: 0;
+	left: 20px;
+	top: 15px;
+	background-repeat: no-repeat;
+	background-position-x: -115px, -67px, -19px, 27px, 73px, 117px, 0 ;
+	filter: drop-shadow(0px 6px 0px var(--shadow)) drop-shadow(4px -1px 0px var(--shadow)) drop-shadow(-4px -1px 0px var(--shadow));
+}
+
+.pickups div span + span {
+	top: 90px;
+	background-color: #141414;
+}
+
+.pickups div + div span  {
+	background-color: #141414;
+}
+.pickups div + div span + span {
+	top: 90px;
+	background-color: var(--marfil);
+}
+
+
+.bridge {
+	background: var(--bridge);
+	width: 340px;
+	height: 170px;
+	position: absolute;
+	bottom: 6vh;
+	border-radius: 5px;
+	filter: drop-shadow(0px 6px 0px #101010) drop-shadow(4px -1px 0px #121212) drop-shadow(-4px -1px 0px #121212);
+	box-shadow: 0 2px 0 0 var(--shadow), 0 -2px 0 0 var(--shadow);
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-evenly;
+	padding: 0 25px;
+	box-sizing: border-box;
+}
+
+.bridge:after {
+	content: "";
+	position: absolute;
+	background: var(--bridge), #333;
+	width: 100%;
+	height: 7px;
+	bottom: 0;
+	border: 1px solid #8b8b8b;
+	border-radius: 2px;
+}
+
+.bridge div {
+	background: 
+		radial-gradient(circle at 75% 6%, #ccc 2px, #333 4px, #fff0 5px 100%), 
+		radial-gradient(circle at 25% 6%, #ccc 2px, #333 4px, #fff0 5px 100%), 
+		linear-gradient(180deg, #fff0 0 0px, #0006 15px 20px, #fff8 22px 22px, #717171 23px 28px, #0002 30px, #fff0 30px 65px, #888888 66px 71px, #fff0 0 10%), 
+		radial-gradient(circle at 50% 59%, #333 5px, #333 6px, #fff0 7px 100%), radial-gradient(circle at 50% 54%, #333 5px, #333 6px, #fff0 7px 100%), radial-gradient(circle at 50% 49%, #333 5px, #333 6px, #fff0 7px 100%), radial-gradient(circle at 50% 44%, #333 5px, #333 6px, #fff0 7px 100%), radial-gradient(circle at 50% 39%, #333 5px, #333 6px, #fff0 7px 100%), radial-gradient(circle at 50% 34%, #333 5px, #333 6px, #fff0 7px 100%),  #c5c5c5;
+	width: 45px;
+	top: 40px;
+	height: 80px;
+	position: relative;
+	background-repeat: repeat;
+	background-position-y: 3px;
+	border: 1px solid #7d7d7d;
+	border-radius: 3px;
+}
+
+.bridge div:before {
+	content: "+";
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: #e1e1e1;
+	border-radius: 100%;
+	top: -53px;
+	left: 11px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	font-size: 28px;
+	box-shadow: 0 1px 0 1px #0008;
+	color: #0004;
+	text-shadow: 1px 0 0px #1118, 0 1px 0px #2228, 0 0 1px #3338;
+	transform: rotate(32deg);
+}
+
+.bridge div:after {
+	content: "";
+	position: absolute;
+	width: 25px;
+	height: 62px;
+	background: repeating-linear-gradient(12.55deg, #1112 1px, #444 2px 4px, #fff0 5px 6px, #1112 7px 8px), #888;
+	clip-path: polygon(20% 0%, 80% 0%, 90% 100%, 10% 100%);
+	top: 6px;
+	left: 11px;
+	border-radius: 0 0 8px 8px;
+	z-index: -1;
+}
+
+.bridge div:nth-child(1) {
+	top: 57px;
+}
+.bridge div:nth-child(2) {
+	top: 54px;
+}
+.bridge div:nth-child(3) {
+	top: 51px;
+}
+.bridge div:nth-child(4) {
+	top: 48px;
+}
+.bridge div:nth-child(5) {
+	top: 45px;
+}
+.bridge div:nth-child(6) {
+	top: 42px;
+}
+
+
+.bridge div:nth-child(2):before {
+	transform: rotate(-22deg);
+	top: -49px;
+}
+.bridge div:nth-child(3):before {
+	transform: rotate(-32deg);
+	top: -46px;
+}
+.bridge div:nth-child(4):before {
+	transform: rotate(27deg);
+	top: -43px;
+}
+.bridge div:nth-child(5):before {
+	transform: rotate(-27deg);
+	top: -40px;
+}
+.bridge div:nth-child(6):before {
+	transform: rotate(12deg);
+	top: -37px;
+}
+
+
+.bridge div:nth-child(1):after {
+	top: 61px;
+}
+.bridge div:nth-child(2):after {
+	top: 63px;
+}
+.bridge div:nth-child(3):after {
+	top: 65px;
+}
+.bridge div:nth-child(4):after {
+	top: 67px;
+}
+.bridge div:nth-child(5):after {
+	top: 70px;
+}
+.bridge div:nth-child(6):after {
+	top: 72px;
+}
+
+
+.strings {
+	width: 240px;
+	height: 86vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+
+.strings div {
+	width: 8px;
+	height: calc(100% + 20px);
+	background: #fff;
+	background: repeating-linear-gradient(-22.5deg, #3f3f3f 1px 2px, #414141 0px 3px, #bbb 4px);
+	border-left: 1px solid #0008;
+	border-right: 1px solid #0008;
+	box-sizing: border-box;
+	z-index: 0;
+	box-shadow: 5px 0px 5px -1px #0004, 0 0 2px 0 #0008;
+	background-repeat: no-repeat;
+	top: -10px;
+	position: relative;
+}
+
+
+.strings div:after {
+	content: "";
+	position: absolute;
+	background: radial-gradient(circle at 50% 50%, #fff0 2px, #0004 3px, #afafaf 4px, #ffffff 100%);
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	bottom: -12px;
+	margin-left: -7px;
+	border: 1px solid #0004;
+}
+
+
+.strings div:nth-child(2) {
+	width: 7px;
+	transform: scaleY(0.995);
+}
+.strings div:nth-child(3) {
+	width: 6px;
+	transform: scaleY(0.9875);
+}
+.strings div:nth-child(4) {
+	width: 5px;
+	transform: scaleY(0.9775);
+}
+.strings div:nth-child(5) {
+	width: 4px;
+	transform: scaleY(0.97);
+}
+.strings div:nth-child(6) {
+	width: 3px;
+	transform: scaleY(0.965);
+}
+
+
+.strings div:nth-child(n+5) {
+	background: linear-gradient(90deg, #b9b9b9, #9c9c9c, #7c7c7c);
+}
+
+
+.buttons {
+	width: 80px;
+	height: 330px;
+	position: absolute;
+	margin-left: 600px;
+	bottom: 17vh;
+	transform: rotate(-15deg);
+	filter: sepia(0.25);
+}
+.buttons div {
+	width: 80px;
+	height: 80px;
+	background: radial-gradient(circle at 25% 25%, #fff 5px, #ddd 16px, #ccc 25px);
+	position: absolute;
+	bottom: 0;
+	transform: rotate(6deg);
+	border-radius: 100%;
+	border: 2px dotted #3332;
+	box-sizing: border-box;
+	box-shadow: 0 3px 0 0 #b1acac, 0 6px 0 0 #8f8f8f, 0 9px 0 0 #6f6f6f, 0 11px 0 2px #939393, 0 13px 0 4px #7f7f7f, 0 15px 0 6px #6f6b6b;
+	filter: drop-shadow(0px 6px 0px var(--shadow)) drop-shadow(4px -1px 0px var(--shadow)) drop-shadow(-4px -1px 0px var(--shadow));
+}
+
+.buttons div + div {
+	bottom: initial;
+}
+
+.buttons div + div + div {
+	bottom: initial;
+	left: 160px;
+	top: -60px;
+	width: 7px;
+	height: 140px;
+	background: #010101;
+	box-shadow: none;
+	border-radius: 5px;
+	transform: rotate(-5deg);
+}
+
+
+.buttons div + div + div:before {
+	content: "";
+	position: absolute;
+	width: 30px;
+	height: 40px;
+	left: 3px;
+	top: -43px;
+	background: #fff;
+	border-radius: 37px 20px 25px 13px;
+	transform: rotate(46deg) skew(20deg, 20deg) rotateY(45deg);
+	box-shadow: 2px -2px 0 2px #ccc;
+}
+
+.buttons div + div + div:after {
+	content: "";
+	position: absolute;
+	width: 7px;
+	height: 21px;
+	left: 0px;
+	top: -3px;
+	background: #575757;
+	transform: rotate(45deg) skew(19deg, 45deg);
+	z-index: -1;
+}
+
+
+
+@media screen and (orientation:landscape) {
+	body {
+		--deg: 0deg;
+	}
+	.guitar {
+		transform: rotate(90deg);
+		height: 100vw;
+	}
+	.strings {
+		height: 88vw;
+	}
+	.bridge {
+		bottom: 7vw;
+	}
+	.pickups {
+		bottom: 15vw;
+	}
+}
+
+
+@media screen and (orientation:landscape) and (max-width:800px) {
+	.pickups {
+		bottom: 37.5vw;
+	}
+}
